@@ -3,6 +3,10 @@ const app = express();
 const fs = require('fs');
 app.use(express.static('public'));
 
+const MongoClient = require('mongodb').MongoClient
+const bodyParser= require('body-parser')
+app.use(bodyParser.urlencoded({extended: true}))
+
 app.set('view engine', 'ejs'); // générateur de template
 
 app.get('/', (req, res) => {
