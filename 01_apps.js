@@ -14,6 +14,14 @@ app.get('/formulaire', (req, res) => {
     res.sendFile( __dirname + "/public/html/" + "01_html.htm" );
 })
 
+app.post('/ajouter', (req, res) => {
+    db.collection('adresse').save(req.body, (err, result) => {
+    if (err) return console.log(err)
+    console.log('sauvegarder dans la BD')
+    res.redirect('/')
+    })
+})
+
 app.get('/', (req, res) => {
     let cursor = db.collection('adresse')
                 .find().toArray(function(err, resultat){
