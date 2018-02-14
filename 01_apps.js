@@ -11,7 +11,7 @@ app.set('view engine', 'ejs'); // générateur de template
 
 
 app.get('/', (req, res) => {
-    let cursor = db.collection('adresses')
+    let cursor = db.collection('adresse')
                 .find().toArray(function(err, resultat){
         if (err) return console.log(err)
         // transfert du contenu vers la vue index.ejs (renders)
