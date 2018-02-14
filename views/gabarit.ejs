@@ -4,17 +4,10 @@
 <%-  include('header.ejs')%>
 
 <body>
- <table class="tableau">
- <% for(elm of adresses) {%>
- <tr>
-        <% for(info in elm) {%>
-            <td><%= elm[info] %></td>
-        <%}%>
- </tr>
- <% } %>
- </table>
-
- <%-  include('footer.ejs')%>
  
+    <%-  include('main.ejs')%>
+
+    <%-  include('footer.ejs')%>
+
 </body>
 </html>

@@ -1,0 +1,9 @@
+<table class="tableau">
+    <% for(elm of adresses) {%>
+        <tr>
+            <% for(info in elm) {%>
+                <td><%= elm[info] %></td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
